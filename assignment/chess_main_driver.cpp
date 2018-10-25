@@ -10,7 +10,7 @@
  * Some basic movements in chess.
  * ----------------------------------------------------------
  */
-#include <stdio.h>
+#include <stdio.h> 
 #include <string.h>
 
 #include "chess.h"
