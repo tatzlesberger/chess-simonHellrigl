@@ -12,13 +12,14 @@
  */
  #include <stdbool.h>
  enum Color {White, Black};
- enum PiceType {
+ enum PieceType {
    Pawn, Knight, Rook, Bishop, Queen, King, NoPiece
  };
-struct ChessPiece{
-  enum Color color;
-  enum PieceType type;
-};
+ struct ChessPiece{
+     enum Color color;
+     enum PieceType type;
+
+ };
 struct ChessSquare{
    bool is_occupied;
    struct ChessPiece piece;
