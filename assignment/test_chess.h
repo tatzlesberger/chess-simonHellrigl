@@ -13,6 +13,7 @@
 #ifndef ___CHESS_TEST_H
 #define ___CHESS_TEST_H
 
+
 #include "shortcut.h"
 
 TEST(test_is_piece);
