@@ -10,10 +10,10 @@
  * Basic chess functions.
  * ----------------------------------------------------------
  */
-#include <stdbool.h>
+ #include <stdbool.h>
  enum Color {White, Black};
  enum PiceType {
-   Pawn, Knight, Rook, Bishop, Queen, King
+   Pawn, Knight, Rook, Bishop, Queen, King, NoPiece
  };
 struct ChessPiece{
   enum Color color;
@@ -22,21 +22,23 @@ struct ChessPiece{
 struct ChessSquare{
    bool is_occupied;
    struct ChessPiece piece;
+   enum PieceType NoPiece;
 
 };
 
 typedef int Rank;
 typedef char File;
 typedef ChessSquare ChessBoard[8][8];
-typedef ChessSquare Chessboard[8][8];
+
 
 
 
 
   void  init_chess_board( ChessBoard chess_board);
-  void setup_chess_board(Chessboard chess_board);
-  bool is_square_occupied(ChessBoard chess_board,int file,  Rank rank);
-  struct ChessSquare* get_square(ChessBoard chess_board,int file,  Rank rank);
+  void setup_chess_board(ChessBoard chess_board);
+
+  bool is_square_occupied(ChessBoard chess_board, File file,  Rank rank);
+  struct ChessSquare* get_square(ChessBoard chess_board,File file,  Rank rank);
   bool add_piece(ChessBoard chess_board, File file ,int rank,struct ChessPiece piece);
   struct ChessPiece get_piece(ChessBoard chess_board, File file , Rank rank);
   bool remove_piece(ChessBoard chess_board, char Xpos ,int Ypos);
