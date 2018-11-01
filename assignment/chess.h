@@ -11,10 +11,12 @@
  * ----------------------------------------------------------
  */
  #include <stdbool.h>
+ enum Move{NoPiece, NormalMove, CaptureMove};
  enum Color {White, Black};
  enum PieceType {
-   Pawn, Knight, Rook, Bishop, Queen, King, NoPiece
+   Pawn, Knight, Rook, Bishop, Queen, King//, NoPiece
  };
+
  struct ChessPiece{
      enum Color color;
      enum PieceType type;
@@ -23,13 +25,14 @@
 struct ChessSquare{
    bool is_occupied;
    struct ChessPiece piece;
-   enum PieceType NoPiece;
+   //enum PieceType NoPiece;
 
 };
 
 typedef int Rank;
 typedef char File;
 typedef ChessSquare ChessBoard[8][8];
+
 
 
 
@@ -51,5 +54,5 @@ typedef ChessSquare ChessBoard[8][8];
 
   bool squares_share_knights_move(File file1, Rank rank1, File file2,  Rank rank2);
   bool squares_share_kings_move(File file1,  Rank rank1, File file2,  Rank rank2);
-  bool squares_share_pawns_move( File file1,  Rank rank1, File file2,  Rank rank2);
+  bool squares_share_pawns_move(enum Color color,NormalMove, File file, Rank rank, File file1, Rank rank1);
   bool squares_share_queens_move(File file1,  Rank rank1, File file2,  Rank rank2);
