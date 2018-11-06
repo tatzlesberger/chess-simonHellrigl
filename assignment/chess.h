@@ -10,7 +10,7 @@
  * Basic chess functions.
  * ----------------------------------------------------------
  */
-
+#include <stdbool.h>
  #ifndef ___CHESS_H
  #define ___CHESS_H
  enum Move{NoPiece, NormalMove, CaptureMove};
