@@ -13,10 +13,10 @@
 #include <stdbool.h>
  #ifndef ___CHESS_H
  #define ___CHESS_H
- enum Move{NoPiece, NormalMove, CaptureMove};
+ enum Move{ NormalMove, CaptureMove};
  enum Color {White, Black};
  enum PieceType {
-   Pawn, Knight, Rook, Bishop, Queen, King//, NoPiece
+   Pawn, Knight, Rook, Bishop, Queen, King, NoPiece
  };
 
  struct ChessPiece{
